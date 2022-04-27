@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   # verb path, to: "control#action"
+  resources :restaurants do
+    resources :reviews, only: [ :new, :create ]
+  end
+end
 
   # Read - Mostrar todos os restaurantes / mostrar um restaurante
   get "/restaurants", to: "restaurants#index"
@@ -23,4 +27,3 @@ Rails.application.routes.draw do
 
   #Delete - Deletar um restaurante especifico
   delete '/restaurants/:id', to: 'restaurants#delete'
-end

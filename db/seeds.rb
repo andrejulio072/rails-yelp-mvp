@@ -10,7 +10,7 @@ Restaurant.destroy_all
 
 puts "Creating restaurants..."
 dishoom = { name: "Dishoom", address: "7 Boundary St, London E2 7JE", phone_number: "07 59 78 66 26", category: "food", stars: 5 }
-pizza_east =  { name: "Pizza East", address: "56A Shoreditch High St, London E1 6PQ", stars: 4 }
+pizza_east =  { name: "Pizza East", address: "56A Shoreditch High St, London E1 6PQ", phone_number: "07 59 78 66 26", category: "food", stars: 4 }
 
 [ dishoom, pizza_east ].each do |attributes|
   restaurant = Restaurant.create!(attributes)
