@@ -7,3 +7,7 @@
 <div>
   <%= link_to "Back to reviews", reviews_path %>
 </div>
+<%= simple_form_for [ @restaurant, @review ] do |f| %>
+  <%= f.input :content %>
+  <%= f.submit "Submit review", class: "btn btn-primary" %>
+<% end %>
